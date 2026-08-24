@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A tiny unexpected website for Bindiya."
+    >
+
+    <title>Hey Bindiya 👋</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="background">
+
+        <div class="gradient gradient-one"></div>
+
+        <div class="gradient gradient-two"></div>
+
+        <div class="stars"></div>
+
+    </div>
+
+
+
+    <!-- =========================
+         PROGRESS BAR
+    ========================== -->
+
+    <div class="progress-container">
+
+        <div
+            class="progress-bar"
+            id="progressBar"
+        ></div>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <main class="website">
+
+
+        <!-- =========================
+             SCREEN 1
+        ========================== -->
+
+        <section
+            class="screen active"
+            id="screen1"
+        >
+
+            <div class="card intro-card">
+
+                <div class="eyebrow">
+                    ⚠️ IMPORTANT MESSAGE
+                </div>
+
+                <div class="big-emoji">
+                    👋
+                </div>
+
+                <h1>
+                    Hey<br>
+                    <span>Bindiya.</span>
+                </h1>
+
+                <p class="typing-text" id="introText"></p>
+
+                <button
+                    class="primary-button hidden"
+                    id="startButton"
+                    onclick="goToScreen(2)"
+                >
+                    Okay... I'm curious 👀
+                </button>
+
+                <p class="tiny-note">
+                    Don't worry. This is not a marriage proposal. 😂
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCREEN 2
+        ========================== -->
+
+        <section
+            class="screen"
+            id="screen2"
+        >
+
+            <div class="card">
+
+                <div class="number">
+                    01
+                </div>
+
+                <div class="big-emoji">
+                    😅
+                </div>
+
+                <h2>
+                    Okay, before you judge me...
+                </h2>
+
+                <p class="description">
+
+                    You probably weren't expecting a random guy
+                    from Facebook to make a whole website.
+
+                </p>
+
+                <p class="description">
+
+                    And honestly...
+
+                </p>
+
+                <div class="dramatic-text">
+                    I wasn't expecting it either. 😂
+                </div>
+
+                <button
+                    class="primary-button"
+                    onclick="goToScreen(3)"
+                >
+                    Continue →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCREEN 3
+        ========================== -->
+
+        <section
+            class="screen"
+            id="screen3"
+        >
+
+            <div class="card">
+
+                <div class="number">
+                    02
+                </div>
+
+                <div class="big-emoji">
+                    🕵️
+                </div>
+
+                <h2>
+                    Let's clear something up.
+                </h2>
+
+                <div class="truth-list">
+
+                    <div class="truth">
+                        <span>❌</span>
+                        <p>Not here to be creepy.</p>
+                    </div>
+
+                    <div class="truth">
+                        <span>❌</span>
+                        <p>Not here to spam your DMs.</p>
+                    </div>
+
+                    <div class="truth">
+                        <span>❌</span>
+                        <p>Not here to act like a simp. 😂</p>
+                    </div>
+
+                    <div class="truth">
+                        <span>✅</span>
+                        <p>Just genuinely wanted to say hi.</p>
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    onclick="goToScreen(4)"
+                >
+                    That's actually fair →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCREEN 4
+        ========================== -->
+
+        <section
+            class="screen"
+            id="screen4"
+        >
+
+            <div class="card">
+
+                <div class="number">
+                    03
+                </div>
+
+                <div class="big-emoji">
+                    🌆
+                </div>
+
+                <h2>
+                    So... Bangalore?
+                </h2>
+
+                <p class="description">
+
+                    This is literally where this whole
+                    random conversation started.
+
+                </p>
+
+                <p class="description">
+                    So I have an extremely important question.
+                </p>
+
+                <div class="question-box">
+
+                    <h3>
+                        Are you actually enjoying Bangalore?
+                    </h3>
+
+                    <button
+                        class="choice"
+                        onclick="chooseBangalore('yes')"
+                    >
+                        😂 Yes, obviously
+                    </button>
+
+                    <button
+                        class="choice"
+                        onclick="chooseBangalore('maybe')"
+                    >
+                        😐 It's complicated
+                    </button>
+
+                    <button
+                        class="choice"
+                        onclick="chooseBangalore('no')"
+                    >
+                        😭 Take me home
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCREEN 5
+        ========================== -->
+
+        <section
+            class="screen"
+            id="screen5"
+        >
+
+            <div class="card">
+
+                <div class="number">
+                    04
+                </div>
+
+                <div class="big-emoji">
+                    🎮
+                </div>
+
+                <h2>
+                    Friendship compatibility test.
+                </h2>
+
+                <p class="description">
+                    Very scientific. Definitely not made up five
+                    minutes ago.
+                </p>
+
+                <div class="question-box">
+
+                    <h3>
+                        Perfect free evening?
+                    </h3>
+
+                    <button
+                        class="choice"
+                        onclick="chooseOption(this)"
+                    >
+                        🍿 Movie & snacks
+                    </button>
+
+                    <button
+                        class="choice"
+                        onclick="chooseOption(this)"
+                    >
+                        ☕ Café & conversations
+                    </button>
+
+                    <button
+                        class="choice"
+                        onclick="chooseOption(this)"
+                    >
+                        🎧 Music & doing absolutely nothing
+                    </button>
+
+                    <button
+                        class="choice"
+                        onclick="chooseOption(this)"
+                    >
+                        🚗 Random plan. Let's see where we end up.
+                    </button>
+
+                </div>
+
+                <button
+                    class="secondary-button disabled"
+                    id="questionNext"
+                    onclick="goToScreen(6)"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCREEN 6
+        ========================== -->
+
+        <section
+            class="screen"
+            id="screen6"
+        >
+
+            <div class="card">
+
+                <div class="number">
+                    05
+                </div>
+
+                <div class="big-emoji">
+                    🧠
+                </div>
+
+                <h2>
+                    One last very serious question.
+                </h2>
+
+                <p class="description">
+                    Please think carefully.
+                </p>
+
+                <div class="question-box">
+
+                    <h3>
+                        If someone randomly made you
+                        a website...
+                    </h3>
+
+                    <button
+                        class="choice"
+                        onclick="funnyAnswer(this)"
+                    >
+                        😂 I'd laugh
+                    </button>
+
+                    <button
+                        class="choice"
+                        onclick="funnyAnswer(this)"
+                    >
+                        👀 I'd be curious
+                    </button>
+
+                    <button
+                        class="choice"
+                        onclick="funnyAnswer(this)"
+                    >
+                        🤨 I'd question their sanity
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCREEN 7
+        ========================== -->
+
+        <section
+            class="screen"
+            id="screen7"
+        >
+
+            <div class="card final-card">
+
+                <div class="big-emoji">
+                    🌻
+                </div>
+
+                <div class="eyebrow">
+                    OKAY, THAT'S IT.
+                </div>
+
+                <h2>
+                    No more surprises.
+                </h2>
+
+                <p class="description">
+
+                    I made this because I realized that my
+                    first few messages probably didn't explain
+                    what I actually meant.
+
+                </p>
+
+                <p class="description">
+
+                    I simply thought you seemed like someone
+                    I'd genuinely enjoy getting to know.
+
+                </p>
+
+                <div class="final-box">
+
+                    <p>
+                        No pressure.
+                    </p>
+
+                    <p>
+                        No expectations.
+                    </p>
+
+                    <p>
+                        No awkwardness.
+                    </p>
+
+                    <strong>
+                        Just friendship. 🤝
+                    </strong>
+
+                </div>
+
+                <p class="description">
+
+                    If you'd like to talk, I'd be happy to
+                    know you.
+
+                </p>
+
+                <p class="description">
+
+                    And if not...
+
+                </p>
+
+                <div class="respect-text">
+                    That's completely okay. 🌿
+                </div>
+
+                <button
+                    class="primary-button"
+                    onclick="friendshipButton()"
+                >
+                    Maybe we can be friends 🤝
+                </button>
+
+                <p class="tiny-note">
+                    Either way, thanks for visiting my
+                    unnecessarily dramatic website. 😂
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCREEN 8
+        ========================== -->
+
+        <section
+            class="screen"
+            id="screen8"
+        >
+
+            <div class="card success-card">
+
+                <div class="celebration">
+                    🎉
+                </div>
+
+                <h2>
+                    Well...
+                </h2>
+
+                <div class="big-result">
+                    Hi, I'm Rahul. 👋
+                </div>
+
+                <p class="description">
+                    I guess we're officially past
+                    the awkward "Hi → Hi" stage now. 😂
+                </p>
+
+                <div class="friendship-line">
+                    Stranger → Maybe friends → ?
+                </div>
+
+                <p class="tiny-note">
+                    Your move. 🙂
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

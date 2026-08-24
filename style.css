@@ -1,0 +1,991 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --background: #0d0d0d;
+
+    --white: #f7f4ef;
+
+    --soft-white: #ddd8d0;
+
+    --muted: #98938b;
+
+    --gold: #d5bd91;
+
+    --card: rgba(255, 255, 255, 0.055);
+
+    --border: rgba(255, 255, 255, 0.11);
+
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: var(--white);
+
+    background: var(--background);
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -5;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(211, 179, 129, 0.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(120, 150, 130, 0.10),
+            transparent 35%
+        ),
+
+        #0d0d0d;
+
+}
+
+
+.gradient {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.25;
+
+}
+
+
+.gradient-one {
+
+    width: 400px;
+
+    height: 400px;
+
+    background: #96784d;
+
+    top: -200px;
+
+    left: -150px;
+
+}
+
+
+.gradient-two {
+
+    width: 450px;
+
+    height: 450px;
+
+    background: #526a55;
+
+    right: -200px;
+
+    bottom: -200px;
+
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(
+            1px 1px at 10% 20%,
+            white,
+            transparent
+        ),
+
+        radial-gradient(
+            1px 1px at 30% 70%,
+            white,
+            transparent
+        ),
+
+        radial-gradient(
+            1px 1px at 50% 30%,
+            white,
+            transparent
+        ),
+
+        radial-gradient(
+            1px 1px at 70% 80%,
+            white,
+            transparent
+        ),
+
+        radial-gradient(
+            1px 1px at 90% 40%,
+            white,
+            transparent
+        ),
+
+        radial-gradient(
+            1px 1px at 80% 15%,
+            white,
+            transparent
+        );
+
+    opacity: 0.35;
+
+    animation: starMove 12s infinite alternate ease-in-out;
+
+}
+
+
+@keyframes starMove {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+    to {
+
+        transform: translateY(-12px);
+
+    }
+
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress-container {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background: rgba(255,255,255,0.04);
+
+    z-index: 100;
+
+}
+
+
+.progress-bar {
+
+    width: 12.5%;
+
+    height: 100%;
+
+    background: var(--gold);
+
+    transition: width 0.6s ease;
+
+}
+
+
+/* =========================================
+   WEBSITE
+========================================= */
+
+.website {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px 18px;
+
+}
+
+
+/* =========================================
+   SCREEN
+========================================= */
+
+.screen {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    display: none;
+
+}
+
+
+.screen.active {
+
+    display: block;
+
+    animation: screenEnter 0.7s ease;
+
+}
+
+
+@keyframes screenEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    width: 100%;
+
+    padding: 65px 48px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.075),
+            rgba(255,255,255,0.025)
+        );
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(25px);
+
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow:
+
+        0 40px 100px
+        rgba(0,0,0,0.45);
+
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.eyebrow {
+
+    display: inline-block;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+
+    margin-bottom: 25px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.number {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #706c66;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================
+   EMOJI
+========================================= */
+
+.big-emoji {
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+    animation: floatingEmoji 3s infinite ease-in-out;
+
+}
+
+
+@keyframes floatingEmoji {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-7px);
+
+    }
+
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h1,
+h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 500;
+
+}
+
+
+h1 {
+
+    font-size: clamp(65px, 11vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 35px;
+
+}
+
+
+h1 span {
+
+    color: var(--gold);
+
+}
+
+
+h2 {
+
+    font-size: clamp(36px, 6vw, 52px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================
+   TYPING
+========================================= */
+
+.typing-text {
+
+    min-height: 65px;
+
+    max-width: 520px;
+
+    margin: auto;
+
+    color: var(--soft-white);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+
+    max-width: 530px;
+
+    margin: 14px auto;
+
+    color: #aaa59d;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================
+   DRAMATIC TEXT
+========================================= */
+
+.dramatic-text {
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.045);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    color: var(--white);
+
+    font-size: 19px;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-button,
+.secondary-button {
+
+    border: none;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border-radius: 50px;
+
+    padding: 15px 28px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+
+}
+
+
+.primary-button {
+
+    margin-top: 30px;
+
+    background: var(--white);
+
+    color: #171717;
+
+}
+
+
+.primary-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(255,255,255,0.13);
+
+}
+
+
+.secondary-button {
+
+    margin-top: 25px;
+
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: var(--white);
+
+}
+
+
+.secondary-button:hover {
+
+    background: rgba(255,255,255,0.07);
+
+}
+
+
+.hidden {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: translateY(10px);
+
+}
+
+
+.primary-button.hidden {
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.3s ease;
+
+}
+
+
+.primary-button.show {
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+
+}
+
+
+.disabled {
+
+    opacity: 0.35;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   TINY NOTE
+========================================= */
+
+.tiny-note {
+
+    margin-top: 25px;
+
+    color: #69655f;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   TRUTH LIST
+========================================= */
+
+.truth-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    max-width: 500px;
+
+    margin: 30px auto;
+
+}
+
+
+.truth {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 18px;
+
+    text-align: left;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.045);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+}
+
+
+.truth span {
+
+    font-size: 18px;
+
+}
+
+
+.truth p {
+
+    color: #bcb7af;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   QUESTION BOX
+========================================= */
+
+.question-box {
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.035);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+}
+
+
+.question-box h3 {
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================
+   CHOICE BUTTONS
+========================================= */
+
+.choice {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    margin: 10px 0;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.09);
+
+    background: rgba(255,255,255,0.04);
+
+    color: #d8d3cb;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        border 0.25s ease;
+
+}
+
+
+.choice:hover {
+
+    background: rgba(255,255,255,0.09);
+
+    transform: translateX(4px);
+
+}
+
+
+.choice.selected {
+
+    background: rgba(213,189,145,0.15);
+
+    border-color: rgba(213,189,145,0.4);
+
+    color: white;
+
+}
+
+
+/* =========================================
+   FINAL BOX
+========================================= */
+
+.final-box {
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(213,189,145,0.09),
+            rgba(255,255,255,0.03)
+        );
+
+    border: 1px solid rgba(213,189,145,0.15);
+
+}
+
+
+.final-box p {
+
+    margin: 7px;
+
+    color: #aaa59d;
+
+}
+
+
+.final-box strong {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: var(--white);
+
+    font-size: 18px;
+
+}
+
+
+.respect-text {
+
+    margin-top: 20px;
+
+    color: #aaa59d;
+
+    font-style: italic;
+
+}
+
+
+/* =========================================
+   SUCCESS SCREEN
+========================================= */
+
+.success-card {
+
+    padding: 75px 45px;
+
+}
+
+
+.celebration {
+
+    font-size: 65px;
+
+    margin-bottom: 25px;
+
+    animation: celebration 1.2s infinite alternate ease-in-out;
+
+}
+
+
+@keyframes celebration {
+
+    from {
+
+        transform: rotate(-5deg) scale(1);
+
+    }
+
+    to {
+
+        transform: rotate(5deg) scale(1.08);
+
+    }
+
+}
+
+
+.big-result {
+
+    margin: 30px auto;
+
+    padding: 22px;
+
+    max-width: 400px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.07);
+
+    font-size: 20px;
+
+}
+
+
+.friendship-line {
+
+    margin-top: 30px;
+
+    color: var(--gold);
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .website {
+
+        padding: 20px 12px;
+
+    }
+
+
+    .card {
+
+        padding: 50px 23px;
+
+        border-radius: 24px;
+
+    }
+
+
+    h1 {
+
+        font-size: 64px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .description {
+
+        font-size: 15px;
+
+    }
+
+
+    .typing-text {
+
+        font-size: 15px;
+
+    }
+
+
+    .question-box {
+
+        padding: 18px;
+
+    }
+
+
+    .choice {
+
+        font-size: 13px;
+
+        padding: 14px;
+
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        width: 100%;
+
+    }
+
+}
